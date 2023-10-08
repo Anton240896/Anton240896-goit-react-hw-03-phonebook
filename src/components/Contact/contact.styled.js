@@ -7,7 +7,7 @@ export const ContactContainer = styled.li`
   gap: 40px;
 
   button {
-    width: 64px;
+    width: 65px;
     height: 30px;
     background-color: #dee873;
     border-radius: 60px;
