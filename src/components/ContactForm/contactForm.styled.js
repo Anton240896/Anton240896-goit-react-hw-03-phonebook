@@ -10,6 +10,9 @@ export const Form = styled.form`
   margin-bottom: 48px;
 
   button {
+    position: absolute;
+    top: 140px;
+    right: 200px;
     min-width: 118px;
     height: 49px;
     background-color: #dee873;
@@ -32,6 +35,6 @@ export const Label = styled.label`
   input {
     display: block;
     width: 167px;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 `;

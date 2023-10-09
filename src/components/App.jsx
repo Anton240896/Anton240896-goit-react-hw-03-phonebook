@@ -3,7 +3,12 @@ import React, { Component } from 'react';
 import { ContactForm } from 'components/ContactForm/contactForm';
 import { ContactList } from 'components/ContactList/contactList';
 import { Filter } from 'components/Filter/filter';
-import { Container, PhonebookName } from './App.styled';
+import {
+  ContactFilter,
+  Container,
+  PhonebookName,
+  Contacts,
+} from './App.styled';
 
 import { nanoid } from 'nanoid';
 
@@ -58,17 +63,25 @@ export class App extends Component {
   /*============================================*/
 
   render() {
+    const stateFilter = this.state.filter;
     const filterElement = this.filterElem();
+    const addContacts = this.addContact;
+    const onFilter = this.onFilter;
+    const deleteContact = this.deleteContact;
 
     return (
       <Container>
         <PhonebookName>Phonebook</PhonebookName>
-        <ContactForm addContact={this.addContact} />
-        <h3>Contacts</h3>
-        <Filter value={this.state.filter} onChange={this.onFilter} />
+        <ContactForm addContact={addContacts} />
+
+        <ContactFilter>
+          <Contacts>Contacts</Contacts>
+          <Filter value={stateFilter} onChange={onFilter} />
+        </ContactFilter>
+
         <ContactList
           contactsBook={filterElement}
-          deleteContact={this.deleteContact}
+          deleteContact={deleteContact}
         />
       </Container>
     );
