@@ -11,14 +11,13 @@ export const Form = styled.form`
 
   button {
     position: absolute;
-    top: 140px;
-    right: 200px;
+    top: 130px;
     min-width: 118px;
     height: 49px;
-    background-color: #dee873;
-    margin-top: -12px;
-    margin-left: 27px;
+    background-color: white;
+
     border-radius: 60px;
+    border-color: black;
     border: none;
     cursor: pointer;
     box-shadow: 3px 5px 20px rgba(0, 5, 0, 0.1);

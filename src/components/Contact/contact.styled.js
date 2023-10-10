@@ -13,6 +13,7 @@ export const ContactContainer = styled.li`
     border-radius: 60px;
     border: none;
     cursor: pointer;
+    background-color: white;
     box-shadow: 3px 5px 20px rgba(0, 5, 0, 0.1);
   }
 `;

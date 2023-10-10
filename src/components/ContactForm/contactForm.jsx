@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Form, Label } from './contactForm.styled';
+// import { Formik } from 'formik';
+// import * as Yup from 'yup';
+
+//solution 1
 
 export class ContactForm extends Component {
   state = {
     name: '',
-    phone: '',
+    number: '',
   };
 
   handleInput = evt => {
@@ -66,3 +70,44 @@ export class ContactForm extends Component {
     );
   }
 }
+
+// solution 2 with library Formic
+
+// const PhoneBookSchema = Yup.object().shape({
+//   name: Yup.string()
+//     .min(1, 'The name is too short!')
+//     .max(25, 'The name is too long!')
+//     .required('Name is required!'),
+//   number: Yup.string()
+//     .min(2, 'The number is too short!')
+//     .max(20, 'The number is too long!')
+//     .required('Phone number is required!'),
+// });
+
+// export const ContactForm = onSubmit => {
+//   return (
+//     <Formik
+//       initialValues={{
+//         name: '',
+//         number: '',
+//       }}
+//       validationSchema={PhoneBookSchema}
+//       onSubmit={(values, actions) => {
+//         onSubmit(values);
+//         actions.resetForm();
+//       }}
+//     >
+//       <Form>
+//         <Label>
+//           Name
+//           <input type="text" name="name" placeholder="Enter name..." />
+//         </Label>
+//         <Label>
+//           Phone
+//           <input type="tel" name="number" placeholder="Enter number..." />
+//         </Label>
+//         <button type="submit">Add contact</button>
+//       </Form>
+//     </Formik>
+//   );
+// };
