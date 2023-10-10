@@ -8,20 +8,21 @@ export const FormStyled = styled.form`
   padding: 12px;
   margin-top: 28px;
   margin-bottom: 48px;
+`;
 
-  button {
-    position: absolute;
-    top: 130px;
-    min-width: 118px;
-    height: 49px;
-    background-color: white;
+export const Button = styled.button`
+  position: absolute;
+  top: 130px;
+  min-width: 118px;
+  height: 49px;
+  background-color: white;
 
-    border-radius: 60px;
-    border-color: black;
-    border: none;
-    cursor: pointer;
-    box-shadow: 3px 5px 20px rgba(0, 5, 0, 0.1);
-  }
+  border-radius: 60px;
+  border-color: black;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 5px 20px rgba(0, 5, 0, 0.1);
+  right: 550px;
 `;
 
 export const LabelStyled = styled.label`

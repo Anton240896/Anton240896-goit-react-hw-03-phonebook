@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormStyled, LabelStyled } from './contactForm.styled';
+import { FormStyled, LabelStyled, Button } from './contactForm.styled';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -99,29 +99,21 @@ export const ContactForm = ({ addContact }) => {
     >
       {() => (
         <Form className="form">
-          <div className="form__field">
-            <label htmlFor="name">Contact name</label>
-            <Field name="name" type="text" placeholder="Enter name..." />
-            <ErrorMessage
-              className="error-message"
-              name="name"
-              component="div"
-            />
-          </div>
+          <label htmlFor="name">Contact name</label>
+          <Field name="name" type="text" placeholder="Enter name..." />
+          <ErrorMessage className="error-message" name="name" component="div" />
 
-          <div className="form__field">
-            <label htmlFor="number">Phone number </label>
-            <Field name="number" type="text" placeholder="Enter number..." />
-            <ErrorMessage
-              className="error-message"
-              name="number"
-              component="div"
-            />
-          </div>
+          <label htmlFor="number">Phone number </label>
+          <Field name="number" type="text" placeholder="Enter number..." />
+          <ErrorMessage
+            className="error-message"
+            name="number"
+            component="div"
+          />
 
-          <button className="form__btn" type="submit">
+          <Button className="form__btn" type="submit">
             Add contact
-          </button>
+          </Button>
         </Form>
       )}
     </Formik>

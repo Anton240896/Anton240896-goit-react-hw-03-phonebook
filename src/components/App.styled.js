@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  width: 500px;
+  width: 560px;
   min-height: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -14,6 +14,7 @@ export const ContactFilter = styled.div`
   align-items: center;
   gap: 104px;
   margin-left: 11px;
+  margin-top: 80px;
 `;
 
 export const Contacts = styled.h3`
