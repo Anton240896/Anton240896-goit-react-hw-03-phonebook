@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Label } from './contactForm.styled';
-import { Formik } from 'formik';
+import { FormStyled, LabelStyled } from './contactForm.styled';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 //solution 1
@@ -84,7 +84,7 @@ const PhoneBookSchema = Yup.object().shape({
     .required('Phone number is required!'),
 });
 
-export const ContactForm = onSubmit => {
+export const ContactForm = ({ addContact }) => {
   return (
     <Formik
       initialValues={{
@@ -93,21 +93,37 @@ export const ContactForm = onSubmit => {
       }}
       validationSchema={PhoneBookSchema}
       onSubmit={(values, actions) => {
-        onSubmit(values);
+        addContact(values);
         actions.resetForm();
       }}
     >
-      <Form>
-        <Label>
-          Name
-          <input type="text" name="name" placeholder="Enter name..." />
-        </Label>
-        <Label>
-          Phone
-          <input type="tel" name="number" placeholder="Enter number..." />
-        </Label>
-        <button type="submit">Add contact</button>
-      </Form>
+      {() => (
+        <Form className="form">
+          <div className="form__field">
+            <label htmlFor="name">Contact name</label>
+            <Field name="name" type="text" placeholder="Enter name..." />
+            <ErrorMessage
+              className="error-message"
+              name="name"
+              component="div"
+            />
+          </div>
+
+          <div className="form__field">
+            <label htmlFor="number">Phone number </label>
+            <Field name="number" type="text" placeholder="Enter number..." />
+            <ErrorMessage
+              className="error-message"
+              name="number"
+              component="div"
+            />
+          </div>
+
+          <button className="form__btn" type="submit">
+            Add contact
+          </button>
+        </Form>
+      )}
     </Formik>
   );
 };

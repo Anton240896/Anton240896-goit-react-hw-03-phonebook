@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Form = styled.form`
+export const FormStyled = styled.form`
   display: flex;
   flex-direction: row;
   width: 472px;
@@ -24,7 +24,7 @@ export const Form = styled.form`
   }
 `;
 
-export const Label = styled.label`
+export const LabelStyled = styled.label`
   display: flex;
   align-items: 20px;
   margin-bottom: 12px;
