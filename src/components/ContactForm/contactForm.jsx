@@ -105,11 +105,7 @@ export const ContactForm = ({ addContact }) => {
 
           <label htmlFor="number">Phone number </label>
           <Field name="number" type="text" placeholder="Enter number..." />
-          <ErrorMessage
-            className="error-message"
-            name="number"
-            component="div"
-          />
+          <ErrorMessage name="number" component="div" />
 
           <Button className="form__btn" type="submit">
             Add contact
