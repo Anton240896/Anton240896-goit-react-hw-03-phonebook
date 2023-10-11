@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { FormStyled, LabelStyled, Button } from './contactForm.styled';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React from 'react';
+import { Button } from './contactForm.styled';
+import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
 //solution 1
@@ -101,11 +101,9 @@ export const ContactForm = ({ addContact }) => {
         <Form className="form">
           <label htmlFor="name">Contact name</label>
           <Field name="name" type="text" placeholder="Enter name..." />
-          <ErrorMessage className="error-message" name="name" component="div" />
 
           <label htmlFor="number">Phone number </label>
           <Field name="number" type="text" placeholder="Enter number..." />
-          <ErrorMessage name="number" component="div" />
 
           <Button className="form__btn" type="submit">
             Add contact
