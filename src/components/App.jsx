@@ -60,7 +60,7 @@ export class App extends Component {
   /*============================================*/
 
   onFilter = evt => {
-    this.setState({ filter: evt.target.value });
+    this.setState({ filter: evt.currentTarget.value });
   };
   /*============================================*/
 
