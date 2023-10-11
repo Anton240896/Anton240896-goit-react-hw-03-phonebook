@@ -107,9 +107,7 @@ export const ContactForm = ({ addContact }) => {
           <LabelStyled htmlFor="number">Phone</LabelStyled>
           <Field name="number" type="text" placeholder="Enter number..." />
 
-          <Button className="form__btn" type="submit">
-            Add contact
-          </Button>
+          <Button type="submit">Add contact</Button>
         </Form>
       )}
     </Formik>

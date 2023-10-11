@@ -1,5 +1,9 @@
 @import-normalize;
+
 /* bring in normalize.css styles */
+:root {
+  --main-color: #dee873;
+}
 
 body {
   background-image: url(./Images/Без\ названия.png);

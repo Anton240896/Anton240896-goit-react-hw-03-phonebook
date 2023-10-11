@@ -21,6 +21,13 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   box-shadow: 3px 5px 20px rgba(0, 5, 0, 0.1);
+
+  :hover {
+    background-color: var(--main-color);
+    color: black;
+    border: 2px solid white;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 `;
 
 export const LabelStyled = styled.label`
