@@ -11,23 +11,20 @@ export const FormStyled = styled.form`
 `;
 
 export const Button = styled.button`
-  position: absolute;
-  top: 130px;
   min-width: 118px;
   height: 49px;
   background-color: white;
-
+  margin-top: 50px;
+  margin-left: 417px;
   border-radius: 60px;
   border-color: black;
   border: none;
   cursor: pointer;
   box-shadow: 3px 5px 20px rgba(0, 5, 0, 0.1);
-  right: 550px;
 `;
 
 export const LabelStyled = styled.label`
-  display: flex;
-  align-items: 20px;
+  padding-left: 30px;
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: bold;
@@ -36,5 +33,6 @@ export const LabelStyled = styled.label`
     display: block;
     width: 167px;
     margin-left: 5px;
+    border-radius: 10%;
   }
 `;

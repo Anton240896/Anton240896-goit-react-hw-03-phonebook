@@ -5,6 +5,7 @@ export const ContactContainer = styled.li`
   align-items: flex-end;
   font-weight: bold;
   gap: 40px;
+  margin-bottom: 20px;
 
   button {
     width: 65px;

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button } from './contactForm.styled';
+import { Button, LabelStyled } from './contactForm.styled';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { HiPhoneOutgoing } from 'react-icons/hi';
 
 //solution 1
 
@@ -98,11 +99,12 @@ export const ContactForm = ({ addContact }) => {
       }}
     >
       {() => (
-        <Form className="form">
-          <label htmlFor="name">Contact name</label>
+        <Form>
+          <HiPhoneOutgoing size={100} />
+          <LabelStyled htmlFor="name">Contacts</LabelStyled>
           <Field name="name" type="text" placeholder="Enter name..." />
 
-          <label htmlFor="number">Phone number </label>
+          <LabelStyled htmlFor="number">Phone</LabelStyled>
           <Field name="number" type="text" placeholder="Enter number..." />
 
           <Button className="form__btn" type="submit">
