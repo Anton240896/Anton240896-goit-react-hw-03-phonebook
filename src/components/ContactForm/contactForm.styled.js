@@ -22,7 +22,7 @@ export const Button = styled.button`
   cursor: pointer;
   box-shadow: 3px 5px 20px rgba(0, 5, 0, 0.1);
 
-  :hover {
+  &:hover {
     background-color: var(--main-color);
     color: black;
     border: 2px solid white;
