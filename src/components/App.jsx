@@ -44,12 +44,8 @@ export class App extends Component {
     const { contacts } = this.state;
     const newNames = data.name.toLowerCase();
 
-    const existingContact = contacts.some(
-      ({ name }) => name.toLowerCase() === newNames
-    );
-
-    if (existingContact) {
-      return alert(`${data.name} is already in contacts!`);
+    if (contacts.some(({ name }) => name.toLowerCase() === newNames)) {
+      alert(`${data.name} is already in contacts!`);
     }
 
     this.setState(prevState => {
