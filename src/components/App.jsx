@@ -18,7 +18,8 @@ export class App extends Component {
     filter: '',
   };
 
-  /*========= ADDING TO LOCAL STORAGE ==============*/
+  /*========= ADDING TO LOCAL STORAGE ========*/
+
   componentDidMount() {
     const savedContacts = localStorage.getItem('contacts');
     const parseContacts = JSON.parse(savedContacts);
@@ -38,6 +39,7 @@ export class App extends Component {
     }
     localStorage.setItem('contacts', JSON.stringify(currContacts));
   }
+
   /*======== FUNCTION ARE LAUNCHED ==============*/
 
   /*======== ADD CONTACT =========*/
@@ -55,11 +57,12 @@ export class App extends Component {
     });
   };
 
-  /*=============== ON FILTER ==================*/
+  /*========= ON FILTER ==========*/
 
   onFilter = evt => {
     this.setState({ filter: evt.currentTarget.value });
   };
+
   /*========== GET CONTACTS & FILTERS ==========*/
 
   filterElem = () => {
@@ -68,6 +71,7 @@ export class App extends Component {
       name.toLowerCase().includes(filter.toLowerCase())
     );
   };
+
   /*======== DELETE CONTACTS BY USING BUTTON ========*/
 
   deleteContact = deleteId => {
