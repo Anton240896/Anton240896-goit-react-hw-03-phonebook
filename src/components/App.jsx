@@ -40,6 +40,8 @@ export class App extends Component {
   }
   /*======== FUNCTION ARE LAUNCHED ==============*/
 
+  /*======== ADD CONTACT =========*/
+
   addContact = data => {
     const { contacts } = this.state;
     const newNames = data.name.toLowerCase();
@@ -53,12 +55,12 @@ export class App extends Component {
     });
   };
 
-  /*============================================*/
+  /*=============== ON FILTER ==================*/
 
   onFilter = evt => {
     this.setState({ filter: evt.currentTarget.value });
   };
-  /*============================================*/
+  /*========== GET CONTACTS & FILTERS ==========*/
 
   filterElem = () => {
     const { contacts, filter } = this.state;
@@ -66,7 +68,7 @@ export class App extends Component {
       name.toLowerCase().includes(filter.toLowerCase())
     );
   };
-  /*============================================*/
+  /*======== DELETE CONTACTS BY USING BUTTON ========*/
 
   deleteContact = deleteId => {
     this.setState(prevState => {
@@ -76,7 +78,7 @@ export class App extends Component {
     });
   };
 
-  /*============================================*/
+  /*========= RENDER =========*/
 
   render() {
     const stateFilter = this.state.filter;
